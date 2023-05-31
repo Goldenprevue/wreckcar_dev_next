@@ -87,9 +87,17 @@ export const localLogin = async (data: LoginData) => {
     const res = await axios.post("users/login", data);
     return res;
   } catch (e) {
-    console.log("로그인 실패");
+    console.log("login fail");
   }
 };
+// export const localLogin = async (data: LoginData) => {
+//   try {
+//     const res = await axios.post("users/login", data);
+//     return res;
+//   } catch (e) {
+//     console.log("login fail");
+//   }
+// };
 export const postUTMs = async (data: any) => {
   try {
     const res = await axios.post("utms", data);
